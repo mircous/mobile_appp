@@ -1,3 +1,1 @@
-# mobile_appp
-# Irakly
-# ...
+aq aris axali cvlileba
