@@ -6,10 +6,9 @@ from kivy.uix.screenmanager import ScreenManager
 from kivymd.uix.screen import Screen
 from kivymd.uix.button import MDRectangleFlatButton
 
-
 class FirstScr(Screen):
     def __init__(self, name='first'):
-        super().__init__(name=name) 
+        super().__init__(name=name)
         btn = Button(text ="Push Me !",
                     font_size ="20sp",
                     background_color =(1, 1, 1, 1),
@@ -18,13 +17,13 @@ class FirstScr(Screen):
                     size_hint =(.2, .2),
                     pos =(300, 20))
         btn.on_press = self.next
-        self.add_widget(btn) 
-    
+        self.add_widget(btn)
+
     def build(self):
         return Label(text='Hello world')
 
     def next(self):
-        self.manager.transition.direction = 'left' 
+        self.manager.transition.direction = 'left'
         self.manager.current = 'second'
 
 class SecondScr(Screen):
@@ -39,7 +38,7 @@ class SecondScr(Screen):
                     pos =(300, 20))
         btn.on_press = self.next
         self.add_widget(btn)
-        
+
     def next(self):
         self.manager.transition.direction = 'left'
         self.manager.current = 'first'
@@ -55,15 +54,14 @@ class SecondScr(Screen):
     #     return btn
     # def build(self):
     #     screen = Screen()
-         
+
     #     btn= MDRectangleFlatButton(text="Submit",pos_hint={'center_x':0.5,'center_y':0.3},on_release=self.btnfunc)
     #     screen.add_widget(btn)
     #     # adding widgets to screen
-     
+
     #     return screen
     # def btnfunc(self,obj):
     #     print("button is pressed!!")
-        
 class MyApp(App):
     def build(self):
         sm = ScreenManager()
