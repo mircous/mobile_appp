@@ -9,6 +9,7 @@ from kivymd.uix.button import MDRectangleFlatButton
 class FirstScr(Screen):
     def __init__(self, name='first'):
         super().__init__(name=name)
+        lbl = Label(text='Hello world')
         btn = Button(text ="Push Me !",
                     font_size ="20sp",
                     background_color =(1, 1, 1, 1),
@@ -18,6 +19,7 @@ class FirstScr(Screen):
                     pos =(300, 20))
         btn.on_press = self.next
         self.add_widget(btn)
+        self.add_widget(lbl)
 
     def build(self):
         return Label(text='Hello world')
